@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
+import { Navbar } from "@/components";
+
 export const metadata: Metadata = {
   title: "Google Awards",
   description:
@@ -14,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-google-reg bg-black text-white">{children}</body>
+      <body className="font-google-reg bg-black text-white max-w-screen-xl mx-auto">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

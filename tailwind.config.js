@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        secondary: {
+          100: "#C6C6C6",
+          },
+      },
       fontFamily: {
         "google-reg": ["Google Sans Regular", "sans-serif"],
         "google-mid": ["Google Sans Medium", "sans-serif"],
