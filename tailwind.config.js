@@ -8,9 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          100: "#EEB63F",
+        },
         secondary: {
           100: "#C6C6C6",
-          },
+          200: "#4D4D4D",
+          300: "#121212",
+          400: "#040404",
+        },
       },
       fontFamily: {
         "google-reg": ["Google Sans Regular", "sans-serif"],
