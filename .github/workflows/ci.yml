@@ -25,10 +25,10 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: yarn
+        run: pnpm
 
       - name: Lint files
-        run: yarn lint
+        run: pnpm lint
 
       - name: Build project
-        run: yarn build
+        run: pnpm build
