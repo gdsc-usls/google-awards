@@ -19,7 +19,7 @@ const stats = [
 
 export const About = () => {
   return (
-    <section className="bg-secondary-400 mt-72 py-24 relative">
+    <section className="bg-secondary-400 mt-72 pt-24 relative">
       <Image
         src="/images/glow.png"
         alt="glow"
@@ -49,7 +49,7 @@ export const About = () => {
             </Link>
           </div>
         </div>
-        <div className="h-1 bg-secondary-300 my-32"></div>
+        <div className="h-[2px] bg-secondary-300 my-32"></div>
 
         <div className="flex justify-evenly">
           {stats.map((s) => (

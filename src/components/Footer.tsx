@@ -62,7 +62,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-secondary-400 mt-64 pt-32  border-t-2 border-t-secondary-300">
+    <footer className="bg-secondary-400 mt-32 md:mt-64 pt-32 border-t-2 border-t-secondary-300">
       <Container className="flex flex-col justify-between">
         <div className="flex w-full flex-col justify-between gap-20 whitespace-nowrap lg:flex-row lg:gap-40 xl:gap-96">
           <div className="text-white">

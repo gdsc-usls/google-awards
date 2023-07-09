@@ -3,7 +3,7 @@ import { Container } from "./Container";
 
 export const Navbar = () => {
   return (
-    <Container className="flex justify-between items-start mt-16">
+    <Container className="flex justify-between items-start mt-16 z-30">
       <div className="flex gap-x-1 items-center border border-[#454545] lg:px-8 px-5 py-2 rounded-full">
         <Image
           priority
@@ -16,7 +16,7 @@ export const Navbar = () => {
         <p>Google Awards</p>
       </div>
 
-      <ul className="flex gap-x-24 lg:flex-rows flex-col">
+      <ul className="flex gap-x-24 lg:flex-row flex-col cursor-pointer mix-blend-difference">
         <li>Home</li>
         <li>About</li>
         <li>GitHub</li>
