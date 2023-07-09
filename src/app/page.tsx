@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container, Form, About } from "@/components";
+import { Container, Form, About, Footer } from "@/components";
 
 export default function Home() {
   return (
@@ -66,6 +66,7 @@ export default function Home() {
       </Container>
 
       <About />
+      <Footer />
     </main>
   );
 }
