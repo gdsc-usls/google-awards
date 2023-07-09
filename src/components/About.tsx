@@ -38,10 +38,10 @@ export const About = () => {
           />
           <div className="flex flex-col gap-y-10">
             <p className="text-2xl leading-normal text-gray-100 w-3/4">
-              "Google Awards: A testament to the power of recognition, fueling
-              passion and driving excellence. By honoring outstanding
+              &quot;Google Awards: A testament to the power of recognition,
+              fueling passion and driving excellence. By honoring outstanding
               individuals, we inspire a ripple effect of innovation, empower
-              dreams, and shape a brighter future together." - Gian Aibo C.
+              dreams, and shape a brighter future together.&quot; - Gian Aibo C.
               Boyero, CEO & Lead
             </p>
             <Link href="/" className="text-primary-100 text-xl">
@@ -51,7 +51,7 @@ export const About = () => {
         </div>
         <div className="h-1 bg-secondary-300 my-32"></div>
 
-        <div className='flex justify-evenly'>
+        <div className="flex justify-evenly">
           {stats.map((s) => (
             <div key={s.title} className="">
               <h1 className="text-7xl text-center text-white mb-4">
