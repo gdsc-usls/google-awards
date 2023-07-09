@@ -27,7 +27,7 @@ export const About = () => {
         className="opacity-20 w-full h-full absolute top-20 pointer-events-none"
       />
       <Container className="mt-24 z-20 relative">
-        <div className="flex items-center">
+        <div className="flex md:flex-row gap-10 flex-col items-center">
           <Image
             src="/images/logo.png"
             quality={100}
@@ -37,7 +37,7 @@ export const About = () => {
             alt="Google Awards Logo"
           />
           <div className="flex flex-col gap-y-10">
-            <p className="text-2xl leading-normal text-gray-100 w-3/4">
+            <p className="text-2xl leading-normal text-gray-100 lg:w-3/4 w-full">
               &quot;Google Awards: A testament to the power of recognition,
               fueling passion and driving excellence. By honoring outstanding
               individuals, we inspire a ripple effect of innovation, empower
@@ -54,11 +54,11 @@ export const About = () => {
         <div className="flex justify-evenly">
           {stats.map((s) => (
             <div key={s.title} className="">
-              <h1 className="text-7xl text-center text-white mb-4">
+              <h1 className="md:text-7xl text-5xl text-center text-white mb-4">
                 {s.title}
                 <span className="text-primary-100">+</span>
               </h1>
-              <p className="text-2xl">{s.subtitle}</p>
+              <p className="md:text-2xl text-xl">{s.subtitle}</p>
             </div>
           ))}
         </div>
