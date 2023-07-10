@@ -62,20 +62,22 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-secondary-400 pt-80">
+    <footer className="bg-secondary-400 mt-32 md:mt-64 pt-32 border-t-2 border-t-secondary-300">
       <Container className="flex flex-col justify-between">
-        <div className="flex w-full flex-col justify-between whitespace-nowrap lg:flex-row">
+        <div className="flex w-full flex-col justify-between gap-20 whitespace-nowrap lg:flex-row lg:gap-40 xl:gap-96">
           <div className="text-white">
             <div className="block text-3xl">
-              <p>GDSC — University of St. La Salle</p>
-              <p className="text-xl text-gray-400">
+              <p>
+                GDSC — <br /> University of St. La Salle
+              </p>
+              <p className="text-xl text-gray-400 mt-2">
                 Powered by Intellect, <br />
                 Driven by Values
               </p>
             </div>
           </div>
 
-          <div className="flex gap-x-24">
+          <div className="flex w-full justify-between">
             {data.map((data) => {
               const { title, items } = data;
 

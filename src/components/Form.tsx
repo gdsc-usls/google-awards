@@ -13,7 +13,7 @@ export const Form = () => {
 
       <button
         type="submit"
-        className="bg-primary-100 text-secondary-300 py-4 px-10 text-xl rounded font-google-mid"
+        className="bg-primary-100 text-secondary-300 lg:py-4 lg:px-10 py-3 px-7 text-xl rounded font-google-mid mt-3 md:mt-0"
       >
         Get Certificate
       </button>
