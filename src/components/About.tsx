@@ -8,18 +8,18 @@ const stats = [
     subtitle: "Members",
   },
   {
-    title: 30,
+    title: 40,
     subtitle: "Officers",
   },
   {
-    title: 21,
+    title: 30,
     subtitle: "Events",
   },
 ];
 
 export const About = () => {
   return (
-    <section className="bg-secondary-400 mt-72 pt-24 relative">
+    <section className="bg-secondary-400 md:mt-72 mt-32 md:pt-24 pt-12 relative pb-32 md:pb-64">
       <Image
         src="/images/glow.png"
         alt="glow"
@@ -27,24 +27,25 @@ export const About = () => {
         className="opacity-20 w-full h-full absolute top-20 pointer-events-none"
       />
       <Container className="mt-24 z-20 relative">
-        <div className="flex md:flex-row gap-10 flex-col items-center">
-          <Image
-            src="/images/logo.png"
-            quality={100}
-            width={250}
-            height={250}
-            className="object-contain pointer-events-none"
-            alt="Google Awards Logo"
-          />
+        <div className="flex md:flex-row flex-col items-center">
+          <div className="relative w-[150px] h-[150px] md:w-[250px] md:h-[250px] flex-none mb-16 md:mb-0">
+            <Image
+              src="/images/logo.png"
+              quality={100}
+              fill
+              className="object-contain pointer-events-none"
+              alt="Google Awards Logo"
+            />
+          </div>
           <div className="flex flex-col gap-y-10">
-            <p className="text-2xl leading-normal text-gray-100 lg:w-3/4 w-full">
+            <p className="md:text-2xl text-xl leading-normal text-gray-100 lg:w-3/4 w-full">
               &quot;Google Awards: A testament to the power of recognition,
               fueling passion and driving excellence. By honoring outstanding
               individuals, we inspire a ripple effect of innovation, empower
               dreams, and shape a brighter future together.&quot; - Gian Aibo C.
               Boyero, CEO & Lead
             </p>
-            <Link href="/" className="text-primary-100 text-xl">
+            <Link href="/" className="text-primary-100 md:text-xl text-lg">
               Description of Awards &rarr;
             </Link>
           </div>
