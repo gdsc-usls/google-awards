@@ -8,11 +8,11 @@ const stats = [
     subtitle: "Members",
   },
   {
-    title: 30,
+    title: 40,
     subtitle: "Officers",
   },
   {
-    title: 21,
+    title: 30,
     subtitle: "Events",
   },
 ];
