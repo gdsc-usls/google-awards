@@ -2,20 +2,27 @@
 
 export const Form = () => {
   return (
-    <form className="mt-12">
+    <form className="mt-12 flex gap-x-3 h-16 md:text-xl text-lg">
       <input
         required
         maxLength={7}
         type="text"
         placeholder="Enter Student ID"
-        className="border border-secondary-200 px-8 py-4 text-xl rounded text-secondary-100 bg-[#121212] outline-none placeholder:text-secondary-100 mr-4"
+        className="border border-secondary-200 px-8 w-full h-full md:max-w-[300px] rounded text-secondary-100 bg-[#121212] outline-none placeholder:text-secondary-100"
       />
 
       <button
         type="submit"
-        className="bg-primary-100 text-secondary-300 lg:py-4 lg:px-10 py-3 px-7 text-xl rounded font-google-mid mt-3 md:mt-0"
+        className="bg-primary-100 hidden md:block text-secondary-300 lg:py-4 lg:px-10 px-7 rounded font-google-mid"
       >
         Get Certificate
+      </button>
+
+      <button
+        type="submit"
+        className="bg-primary-100 md:hidden text-secondary-300 lg:py-4 lg:px-10 px-4 rounded font-google-mid"
+      >
+        &rarr;
       </button>
     </form>
   );

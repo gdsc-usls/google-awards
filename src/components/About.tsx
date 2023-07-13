@@ -19,7 +19,7 @@ const stats = [
 
 export const About = () => {
   return (
-    <section className="bg-secondary-400 mt-72 pt-24 relative">
+    <section className="bg-secondary-400 md:mt-72 mt-32 md:pt-24 pt-12 relative">
       <Image
         src="/images/glow.png"
         alt="glow"
@@ -37,14 +37,14 @@ export const About = () => {
             alt="Google Awards Logo"
           />
           <div className="flex flex-col gap-y-10">
-            <p className="text-2xl leading-normal text-gray-100 lg:w-3/4 w-full">
+            <p className="md:text-2xl text-xl leading-normal text-gray-100 lg:w-3/4 w-full">
               &quot;Google Awards: A testament to the power of recognition,
               fueling passion and driving excellence. By honoring outstanding
               individuals, we inspire a ripple effect of innovation, empower
               dreams, and shape a brighter future together.&quot; - Gian Aibo C.
               Boyero, CEO & Lead
             </p>
-            <Link href="/" className="text-primary-100 text-xl">
+            <Link href="/" className="text-primary-100 md:text-xl text-lg">
               Description of Awards &rarr;
             </Link>
           </div>
