@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container, Form, About, Footer } from "@/components";
+import { Container, Form, About } from "@/components";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
           src="/images/glow.png"
           alt="glow"
           fill
-          className="opacity-10 w-[1500px] h-full absolute top-0 -left-52 -z-10"
+          className="opacity-20 w-[1500px] h-full absolute top-0 -z-10"
         />
 
         <Image
@@ -92,7 +92,6 @@ export default function Home() {
       </Container>
 
       <About />
-      <Footer />
     </main>
   );
 }

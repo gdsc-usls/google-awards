@@ -19,7 +19,7 @@ const stats = [
 
 export const About = () => {
   return (
-    <section className="bg-secondary-400 md:mt-72 mt-32 md:pt-24 pt-12 relative pb-32 md:pb-64">
+    <section id='about' className="bg-secondary-400 md:mt-72 mt-32 md:pt-24 pt-12 relative pb-32 md:pb-64">
       <Image
         src="/images/glow.png"
         alt="glow"
