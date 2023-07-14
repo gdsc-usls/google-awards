@@ -22,13 +22,19 @@ export const Navbar = () => {
 
       <ul className="flex gap-x-24 lg:flex-row flex-col cursor-pointer lg:bg-secondary-400 lg:p-4 lg:px-16 lg:rounded-full lg:border lg:border-[#454545]">
         <li>
-          <Link href="/">Home</Link>
+          <a href="https://gdsc-usls.live">Home</a>
         </li>
         <li>
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="https://github.com/gdsc-usls/google-awards">GitHub</a>
+          <a
+            href="https://github.com/gdsc-usls/google-awards"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            GitHub
+          </a>
         </li>
       </ul>
     </Container>
