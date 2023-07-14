@@ -4,7 +4,7 @@ import Tilt from "react-parallax-tilt";
 
 export default function Home() {
   return (
-    <div className="mt-52">
+    <div className="mt-52 pb-32 md:pb-64">
       <Image
         priority
         src="/images/glow.png"

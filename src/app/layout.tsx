@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-
-import { Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
   title: "Google Awards",
@@ -32,6 +31,7 @@ export default function RootLayout({
       <body className="font-google-reg bg-black text-secondary-100">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
