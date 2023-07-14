@@ -11,3 +11,9 @@
   font-family: "Google Sans Medium";
   src: url("/fonts/GoogleSans-Medium.woff2") format("woff2");
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
