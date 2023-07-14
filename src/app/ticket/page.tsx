@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
+import { Container } from "@/components";
 
 export default function Ticket() {
   return (
-    <div className="mt-52 pb-32 md:pb-64">
+    <Container className="mt-52 pb-32 md:pb-64">
       <Image
         src="/images/glow.png"
         alt="glow"
@@ -13,14 +14,14 @@ export default function Ticket() {
       />
       <Tilt
         gyroscope
-        className="lg:max-w-[850px] md:max-w-[600px] max-w-[400px] mx-auto rounded overflow-hidden shadow-lg"
+        className="lg:max-w-[850px] mx-auto rounded overflow-hidden shadow-lg"
       >
         <img
-          className="w-full pointer-events-none h-full object-cover"
+          className="w-full pointer-events-none h-full object-contain"
           src="/images/ticket.png"
-          alt="PowerOn Certificate"
+          alt="Official E-Ticket"
         />
       </Tilt>
-    </div>
+    </Container>
   );
 }
