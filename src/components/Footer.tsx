@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "./Container";
 
 export const Footer = () => {
@@ -7,11 +8,11 @@ export const Footer = () => {
       items: [
         {
           title: "Home",
-          link: "/home",
+          link: "/",
         },
         {
-          title: "About",
-          link: "/about",
+          title: "Ticket",
+          link: "/ticket",
         },
         {
           title: "Awards",
@@ -28,16 +29,16 @@ export const Footer = () => {
           link: "https://umamin.link/",
         },
         {
+          title: "Landing Page",
+          link: "https://github.com/gdsc-usls/landing",
+        },
+        {
           title: "ID Generator",
           link: "https://github.com/gdsc-usls/id-generator",
         },
         {
           title: "Certificate Generator",
           link: "https://github.com/gdsc-usls/certificate-generator",
-        },
-        {
-          title: "Landing Page",
-          link: "https://github.com/gdsc-usls/landing",
         },
       ],
     },
@@ -78,22 +79,24 @@ export const Footer = () => {
           </div>
 
           <div className="flex w-full justify-between">
-            {data.map((data) => {
-              const { title, items } = data;
-
+            {data.map(({ title, items }) => {
               return (
                 <div key={title} className="space-y-2 text-sm md:text-lg">
                   <h3 className="font-medium text-white">{title}</h3>
                   <ul className="flex flex-col  space-y-2 font-normal text-gray-400 [&>li>a:hover]:text-gray-500 [&>li>a:hover]:transition-all">
                     {items.map((item) => (
                       <li key={item.title}>
-                        <a
-                          target="_blank"
-                          rel="noreferrer noopener"
-                          href={item.link}
-                        >
-                          {item.title}
-                        </a>
+                        {title === "Shortcuts" ? (
+                          <Link href={item.link}>{item.title}</Link>
+                        ) : (
+                          <a
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            href={item.link}
+                          >
+                            {item.title}
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
