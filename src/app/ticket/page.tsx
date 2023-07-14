@@ -2,11 +2,10 @@
 import Image from "next/image";
 import Tilt from "react-parallax-tilt";
 
-export default function Home() {
+export default function Ticket() {
   return (
     <div className="mt-52 pb-32 md:pb-64">
       <Image
-        priority
         src="/images/glow.png"
         alt="glow"
         fill

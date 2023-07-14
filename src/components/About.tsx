@@ -45,7 +45,7 @@ export const About = () => {
               dreams, and shape a brighter future together.&quot; - Gian Aibo C.
               Boyero, CEO & Lead
             </p>
-            <Link href="/" className="text-primary-100 md:text-xl text-lg">
+            <Link href="/awards" className="text-primary-100 md:text-xl text-lg">
               Description of Awards &rarr;
             </Link>
           </div>
