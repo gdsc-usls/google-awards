@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 
 import { Award, useAward } from "@/hooks";
 import { Container } from "@/components";
+import { Major, Yearly } from "@/components/Certificates";
 
 export default function Award({ params }: { params: { id: string } }) {
   const [certData, setCertData] = useState<Award | null>();
@@ -56,17 +57,11 @@ const Certificate = ({ data, setData }: Props) => {
     <div className="flex flex-col gap-y-20 items-center">
       <Tilt gyroscope className="max-w-[850px] mx-auto">
         <div className="w-full relative rounded-lg grid place-items-center">
-          <p className="absolute lg:mb-32 md:mb-28 sm:mb-24 mb-16 uppercase text-[#C6C6C6] md:[font-size:clamp(14px,3vw,30px)] [font-size:clamp(14px,3vw,30px)]">
-            {data?.award}
-          </p>
-          <p className="absolute lg:mt-16 md:mt-14 sm:mt-12 mt-8 text-primary-100 md:[font-size:clamp(14px,4vw,40px)] [font-size:clamp(14px,4vw,40px)]">
-            {data?.name}
-          </p>
-          <img
-            className="w-full pointer-events-none h-full object-cover"
-            src="/images/certificates/yearly.png"
-            alt="PowerOn Certificate"
-          />
+          {data.type === "yearly" ? (
+            <Yearly data={data} />
+          ) : (
+            <Major data={data} />
+          )}
         </div>
       </Tilt>
       <button
