@@ -22,7 +22,7 @@ export default function Award({ params }: { params: { id: string } }) {
       {certData ? (
         <Certificate data={certData} setData={setCertData} />
       ) : (
-        <div className="flex gap-x-4">
+        <div className="flex gap-x-4 flex-col sm:flex-row gap-y-8 sm:gap-y-0">
           {data.map((item: Award) => (
             <Card key={item.award} data={item} setData={setCertData} />
           ))}
@@ -41,7 +41,7 @@ const Card = ({ data, setData }: Props) => {
   return (
     <button
       onClick={() => setData(data)}
-      className="bg-secondary-300 border text-left border-secondary-200 px-8 py-6 rounded-md bg-opacity-60 transition-all hover:-translate-y-4 duration-300 w-[300px] cursor-pointer flex flex-col justify-between h-[180px]"
+      className="bg-secondary-300 border text-left border-secondary-200 px-8 py-6 rounded-md bg-opacity-60 transition-all hover:-translate-y-4 duration-300 sm:w-[300px] cursor-pointer flex flex-col justify-between h-[180px] w-full"
     >
       <div>
         <h1 className="text-primary-100 text-xl">{data.name}</h1>
