@@ -1,11 +1,14 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 import Tilt from "react-parallax-tilt";
 
-import { useAward } from "@/hooks";
+import { Award, useAward } from "@/hooks";
 import { Container } from "@/components";
+import { Major, Yearly } from "@/components/Certificates";
 
 export default function Award({ params }: { params: { id: string } }) {
+  const [certData, setCertData] = useState<Award | null>();
   const { data } = useAward(params.id);
 
   return (
@@ -16,21 +19,58 @@ export default function Award({ params }: { params: { id: string } }) {
         fill
         className="opacity-20 w-[1500px] h-full absolute top-0 -z-10"
       />
-      <Tilt gyroscope className="max-w-[850px] mx-auto">
-        <div className="w-full relative rounded-lg grid place-items-center">
-          <p className="absolute lg:mb-32 md:mb-28 sm:mb-24 mb-16 uppercase text-[#C6C6C6] md:[font-size:clamp(14px,3vw,30px)] [font-size:clamp(14px,3vw,30px)]">
-            {data?.award}
-          </p>
-          <p className="absolute lg:mt-16 md:mt-14 sm:mt-12 mt-8 text-primary-100 md:[font-size:clamp(14px,4vw,40px)] [font-size:clamp(14px,4vw,40px)]">
-            {data?.name}
-          </p>
-          <img
-            className="w-full pointer-events-none h-full object-cover"
-            src="/images/certificates/yearly.png"
-            alt="PowerOn Certificate"
-          />
+      {certData ? (
+        <Certificate data={certData} setData={setCertData} />
+      ) : (
+        <div className="flex gap-x-4 flex-col sm:flex-row gap-y-8 sm:gap-y-0">
+          {data.map((item: Award) => (
+            <Card key={item.award} data={item} setData={setCertData} />
+          ))}
         </div>
-      </Tilt>
+      )}
     </Container>
   );
 }
+
+type Props = {
+  data: Award;
+  setData: React.Dispatch<React.SetStateAction<Award | undefined | null>>;
+};
+
+const Card = ({ data, setData }: Props) => {
+  return (
+    <button
+      onClick={() => setData(data)}
+      className="bg-secondary-300 border text-left border-secondary-200 px-8 py-6 rounded-md bg-opacity-60 transition-all hover:-translate-y-4 duration-300 sm:w-[300px] cursor-pointer flex flex-col justify-between h-[180px] w-full"
+    >
+      <div>
+        <h1 className="text-primary-100 text-xl">{data.name}</h1>
+        <h1>{data.award}</h1>
+      </div>
+      <p className="text-gray-400 text-sm">View Certificate &rarr;</p>
+    </button>
+  );
+};
+
+const Certificate = ({ data, setData }: Props) => {
+  return (
+    <div className="flex flex-col gap-y-20 items-center">
+      <Tilt gyroscope className="max-w-[850px] mx-auto">
+        <div className="w-full relative rounded-lg grid place-items-center">
+          {data.type === "yearly" ? (
+            <Yearly data={data} />
+          ) : (
+            <Major data={data} />
+          )}
+        </div>
+      </Tilt>
+      <button
+        type="button"
+        onClick={() => setData(null)}
+        className="border border-secondary-200 rounded-full px-8 py-3 hover:scale-105 transform transition-all duration-200 bg-secondary-300 bg-opacity-60"
+      >
+        Back to List
+      </button>
+    </div>
+  );
+};

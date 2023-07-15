@@ -4,5 +4,156 @@
     "name": "Josh Daniel Bañares",
     "award": "Developer of the Year",
     "type": "yearly"
+  },
+  {
+    "id": "2121193",
+    "name": "Gabrielle Bondad",
+    "award": "Most Outstanding Developer in the Field of Events",
+    "type": "major"
+  },
+  {
+    "id": "2021584",
+    "name": "Jarl Briones",
+    "award": "Leader of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2200551",
+    "name": "Joseph Dale Bañares",
+    "award": "Tech Enthusiast of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2120049",
+    "name": "Marielle Garbanzos",
+    "award": "Performer of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2020579",
+    "name": "Dominic Ciocon",
+    "award": "Trailblazer of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "1921138",
+    "name": "Stephanie Choa",
+    "award": "Financial Innovator of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2202266",
+    "name": "Leigh Eslawa",
+    "award": "Graphic Artist of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2201064",
+    "name": "Josh Daniel Bañares",
+    "award": "Most Outstanding Developer in the Field of Technology",
+    "type": "major"
+  },
+  {
+    "id": "2120272",
+    "name": "John Vincent Espinosa",
+    "award": "Communicator of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2021741",
+    "name": "Chammy Cardones",
+    "award": "Artist of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2121205",
+    "name": "Marco Cornejo",
+    "award": "Voice Artist of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2120195",
+    "name": "Joshua Jardeleza",
+    "award": "award here",
+    "type": "yearly"
+  },
+  {
+    "id": "2121705",
+    "name": "Justin Tan",
+    "award": "Host of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2120429",
+    "name": "Clive Nys",
+    "award": "Writer of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "2120795",
+    "name": "Gian Aibo Boyero",
+    "award": "Google Fellow of the Year",
+    "type": "major"
+  },
+  {
+    "id": "2120757",
+    "name": "Paolo John Jimenea",
+    "award": "All-Rounder of the Year",
+    "type": "major"
+  },
+  {
+    "id": "2120492",
+    "name": "Jose Emmanuel Felizario",
+    "award": "Most Outstanding Officer",
+    "type": "major"
+  },
+  {
+    "id": "2010333",
+    "name": "Nash Encarnacion",
+    "award": "Most Outstanding Member",
+    "type": "major"
+  },
+  {
+    "id": "2010686",
+    "name": "Angela Del Rosario",
+    "award": "Women in Tech Award",
+    "type": "major"
+  },
+  {
+    "id": "2200551",
+    "name": "Joseph Dale Bañares",
+    "award": "Men in Tech Award",
+    "type": "major"
+  },
+  {
+    "id": "2121212",
+    "name": "Xavier Duance Nojas",
+    "award": "Most Outstanding Developer in the Field of Media",
+    "type": "major"
+  },
+
+  {
+    "id": "2010686",
+    "name": "Angela Del Rosario",
+    "award": "Most Outstanding Developer in the Field of Human Resources",
+    "type": "major"
+  },
+  {
+    "id": "2120707",
+    "name": "Jeremy Arroz",
+    "award": "Most Outstanding Developer in the Field of Marketing",
+    "type": "major"
+  },
+  {
+    "id": "2120795",
+    "name": "Gian Aibo Boyero",
+    "award": "Role Model of the Year",
+    "type": "yearly"
+  },
+  {
+    "id": "Website",
+    "name": "Official GDSC Website with ID & Certificate Generator",
+    "award": "Project of the Year",
+    "type": "yearly"
   }
 ]
