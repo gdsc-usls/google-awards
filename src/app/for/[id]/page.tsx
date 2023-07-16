@@ -24,6 +24,22 @@ export default function Award({ params }: { params: { id: string } }) {
         fill
         className="opacity-20 w-[1500px] h-full absolute top-0 -z-10"
       />
+      {data.length <= 0 && (
+        <div className="flex flex-col items-center justify-center md:pt-24">
+          <p className="text-2xl font-bold text-center">No certificate found</p>
+          <div className="text-center">
+            <p className="text-center">
+              If you think this is a mistake, please contact us at
+            </p>
+            <a
+              href="mailto:gdsc@usls.edu.ph"
+              className="text-center text-primary-100 hover:underline"
+            >
+              gdsc@usls.edu.ph
+            </a>
+          </div>
+        </div>
+      )}
       {certData ? (
         <Certificate data={certData} setData={setCertData} />
       ) : (
