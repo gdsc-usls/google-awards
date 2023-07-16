@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import NextTopLoader from "nextjs-toploader";
 import { Footer, Navbar } from "@/components";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-google-reg bg-black text-secondary-100">
+        <NextTopLoader />
         <Navbar />
         {children}
         <Footer />
