@@ -21,6 +21,7 @@ module.exports = {
       fontFamily: {
         "google-reg": ["Google Sans Regular", "sans-serif"],
         "google-mid": ["Google Sans Medium", "sans-serif"],
+        "edwardian-script": ["Edwardian Script ITC", "sans-serif"],
       },
     },
   },

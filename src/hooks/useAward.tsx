@@ -4,7 +4,7 @@ export type Award = {
   id: string;
   name: string;
   award: string;
-  type: string;
+  type: "yearly" | "major" | "diploma" | "appreciation";
 };
 
 export const useAward = (id: string) => {
