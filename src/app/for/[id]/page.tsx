@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 
 import { Award, useAward } from "@/hooks";
 import { Container } from "@/components";
-import { Major, Yearly } from "@/components/Certificates";
+import { Diploma, Major, Yearly } from "@/components/Certificates";
 
 export default function Award({ params }: { params: { id: string } }) {
   const [certData, setCertData] = useState<Award | null>();
@@ -57,11 +57,9 @@ const Certificate = ({ data, setData }: Props) => {
     <div className="flex flex-col gap-y-20 items-center">
       <Tilt gyroscope className="max-w-[850px] mx-auto">
         <div className="w-full relative rounded-lg grid place-items-center">
-          {data.type === "yearly" ? (
-            <Yearly data={data} />
-          ) : (
-            <Major data={data} />
-          )}
+          {data.type === "yearly" && <Yearly data={data} />}
+          {data.type === "major" && <Major data={data} />}
+          {data.type === "diploma" && <Diploma data={data} />}
         </div>
       </Tilt>
       <button
@@ -69,7 +67,7 @@ const Certificate = ({ data, setData }: Props) => {
         onClick={() => setData(null)}
         className="border border-secondary-200 rounded-full px-8 py-3 hover:scale-105 transform transition-all duration-200 bg-secondary-300 bg-opacity-60"
       >
-        Back to List
+        &larr; &nbsp; Back to List
       </button>
     </div>
   );
