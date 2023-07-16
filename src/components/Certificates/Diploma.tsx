@@ -7,7 +7,7 @@ export const Diploma = ({ data }: { data: Award }) => {
         {data?.name}
       </p>
       <img
-        className="w-full pointer-events-none h-full object-cover rounded"
+        className="w-full pointer-events-none h-full object-contain rounded"
         src={`/images/certificates/diploma.png`}
         alt="PowerOn Certificate"
       />
