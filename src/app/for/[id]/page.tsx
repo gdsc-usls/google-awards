@@ -5,7 +5,12 @@ import Tilt from "react-parallax-tilt";
 
 import { Award, useAward } from "@/hooks";
 import { Container } from "@/components";
-import { Diploma, Major, Yearly } from "@/components/Certificates";
+import {
+  Appreciation,
+  Diploma,
+  Major,
+  Yearly,
+} from "@/components/Certificates";
 
 export default function Award({ params }: { params: { id: string } }) {
   const [certData, setCertData] = useState<Award | null>();
@@ -22,7 +27,7 @@ export default function Award({ params }: { params: { id: string } }) {
       {certData ? (
         <Certificate data={certData} setData={setCertData} />
       ) : (
-        <div className="flex gap-x-4 flex-col sm:flex-row gap-y-8 sm:gap-y-0">
+        <div className="flex gap-x-4 gap-y-8 lg:gap-y-0 flex-wrap">
           {data.map((item: Award) => (
             <Card key={item.award} data={item} setData={setCertData} />
           ))}
@@ -60,6 +65,7 @@ const Certificate = ({ data, setData }: Props) => {
           {data.type === "yearly" && <Yearly data={data} />}
           {data.type === "major" && <Major data={data} />}
           {data.type === "diploma" && <Diploma data={data} />}
+          {data.type === "appreciation" && <Appreciation data={data} />}
         </div>
       </Tilt>
       <button

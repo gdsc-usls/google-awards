@@ -599,5 +599,54 @@
     "name": "Jhustin Paul Zamora",
     "award": "Diploma",
     "type": "diploma"
+  },
+
+    {
+    "id": "2121205",
+    "name": "Aevi Marco Cornejo",
+    "award": "Performing Artist",
+    "type": "appreciation"
+  },
+    {
+    "id": "2010551",
+    "name": "Naomi Esther Liu",
+    "award": "Performing Artist",
+    "type": "appreciation"
+  },
+    {
+    "id": "2202334",
+    "name": "Andre Rawson Torre",
+    "award": "Performing Artist",
+    "type": "appreciation"
+  },
+    {
+    "id": "2120264",
+    "name": "Charisse Michaela Oria",
+    "award": "Performing Artist",
+    "type": "appreciation"
+  },
+    {
+    "id": "2010591",
+    "name": "Reise Belzunce Law-a",
+    "award": "Performing Artist",
+    "type": "appreciation"
+  },
+    {
+    "id": "2010592",
+    "name": "Thea Beatriz Law-a",
+    "award": "Performing Artist",
+    "type": "appreciation"
+  },
+    {
+    "id": "mahidaiton",
+    "name": "The Mahidaiton Dance Troupe",
+    "award": "Performing Artist",
+    "type": "appreciation"
+  },
+    {
+    "id": "x-virus",
+    "name": "X : Virus",
+    "award": "Performing Artist",
+    "type": "appreciation"
   }
 ]
