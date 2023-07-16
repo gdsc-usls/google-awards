@@ -12,6 +12,11 @@
   src: url("/fonts/GoogleSans-Medium.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "Edwardian Script ITC";
+  src: url("/fonts/EdwardianScriptITC.woff2") format("woff2");
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
