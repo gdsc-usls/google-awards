@@ -23,6 +23,9 @@ dependencies:
   eslint-config-next:
     specifier: 13.4.9
     version: 13.4.9(eslint@8.44.0)(typescript@5.1.6)
+  html-to-image:
+    specifier: ^1.11.11
+    version: 1.11.11
   next:
     specifier: 13.4.9
     version: 13.4.9(react-dom@18.2.0)(react@18.2.0)
@@ -1445,6 +1448,10 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+    dev: false
+
+  /html-to-image@1.11.11:
+    resolution: {integrity: sha512-9gux8QhvjRO/erSnDPv28noDZcPZmYE7e1vFsBLKLlRlKDSqNJYebj6Qz1TGd5lsRV+X+xYyjCKjuZdABinWjA==}
     dev: false
 
   /human-signals@2.1.0:
