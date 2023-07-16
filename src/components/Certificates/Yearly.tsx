@@ -10,9 +10,9 @@ export const Yearly = ({ data }: { data: Award }) => {
         {data?.name}
       </p>
       <img
-        className="w-full pointer-events-none h-full object-cover rounded"
-        src={`/images/certificates/yearly.png`}
-        alt="PowerOn Certificate"
+        className="w-full pointer-events-none h-full object-contain rounded"
+        src="/images/certificates/yearly-cert.png"
+        alt="Yearly Certificate"
       />
     </>
   );
