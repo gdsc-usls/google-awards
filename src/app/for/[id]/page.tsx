@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useCallback, useRef, useState } from "react";
+import { toPng } from "html-to-image";
 import Tilt from "react-parallax-tilt";
 
 import { Award, useAward } from "@/hooks";
@@ -74,23 +75,52 @@ const Card = ({ data, setData }: Props) => {
 };
 
 const Certificate = ({ data, setData }: Props) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const saveImage = useCallback(() => {
+    if (cardRef.current === null) {
+      return;
+    }
+
+    toPng(cardRef.current, { cacheBust: true })
+      .then((dataUrl) => {
+        const link = document.createElement("a");
+        link.download = `${data?.id}_${data.award}.png`;
+        link.href = dataUrl;
+        link.click();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cardRef]);
+
   return (
     <div className="flex flex-col gap-y-20 items-center">
       <Tilt gyroscope className="max-w-[850px] mx-auto">
-        <div className="w-full relative rounded-lg grid place-items-center">
+        <div ref={cardRef} className="w-full relative grid place-items-center">
           {data.type === "yearly" && <Yearly data={data} />}
           {data.type === "major" && <Major data={data} />}
           {data.type === "diploma" && <Diploma data={data} />}
           {data.type === "appreciation" && <Appreciation data={data} />}
         </div>
       </Tilt>
-      <button
-        type="button"
-        onClick={() => setData(null)}
-        className="border border-secondary-200 rounded-full px-8 py-3 hover:scale-105 transform transition-all duration-200 bg-secondary-300 bg-opacity-60"
-      >
-        &larr; &nbsp; Back to List
-      </button>
+      <div className='flex gap-x-2'>
+        <button
+          type="button"
+          onClick={() => setData(null)}
+          className="border border-secondary-200 rounded-l-full px-8 py-3 hover:scale-105 transform transition-all duration-200 bg-secondary-300 bg-opacity-60"
+        >
+          &larr; &nbsp; Back to List
+        </button>
+        <button
+          type="button"
+          onClick={saveImage}
+          className="border border-secondary-200 rounded-r-full px-8 py-3 hover:scale-105 transform transition-all duration-200 bg-secondary-300 bg-opacity-60"
+        >
+          Save
+        </button>
+      </div>
     </div>
   );
 };
