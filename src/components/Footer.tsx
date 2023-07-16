@@ -25,10 +25,6 @@ export const Footer = () => {
       title: "Projects",
       items: [
         {
-          title: "Umamin",
-          link: "https://umamin.link/",
-        },
-        {
           title: "Landing Page",
           link: "https://github.com/gdsc-usls/landing",
         },
