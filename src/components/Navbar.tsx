@@ -25,7 +25,7 @@ export const Navbar = () => {
           <a href="https://gdsc-usls.live">Home</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link href="/#about">About</Link>
         </li>
         <li>
           <a
